@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.app.ActivityManager;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
@@ -37,6 +39,8 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import pl.droidsonroids.gif.GifImageView;
+
 public class MainActivity extends AppCompatActivity {
 
     DBHelper DB;
@@ -54,9 +58,9 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView text;
     private SeekBar sk_height_control;
-    private Button btn_save, btn_width, btn_height, viewList;
-    private ImageButton btn_share;
-
+    private Button btn_save, btn_width, btn_height, viewList, refreshBtn;
+    private ImageButton settingsBtn;
+    private int tutorialCounter = 0;
     List<AnchorNode> anchorNodes = new ArrayList<>();
 
     private boolean measure_height = false;
@@ -68,6 +72,63 @@ public class MainActivity extends AppCompatActivity {
     private String message;
 
 
+
+    Dialog myDialog;
+
+
+    /**
+     * This will open up the tutorials tab*/
+    public void ShowPopup(View v) {
+        TextView instructionsTv;
+        Button nextBtn;
+        GifImageView visualGif;
+        Context c = getApplicationContext();
+        myDialog.setContentView(R.layout.tutorial_layout);
+
+        visualGif = myDialog.findViewById(R.id.visualGif);
+
+
+        nextBtn = myDialog.findViewById(R.id.nextBtn);
+        instructionsTv = myDialog.findViewById(R.id.instructionsTv);
+        visualGif.setBackgroundResource(getImageId(c, "pick"));
+
+        tutorialCounter = 0;
+        nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tutorialCounter++;
+                switch(tutorialCounter)
+                {
+                    case 1:
+                        visualGif.setBackgroundResource(getImageId(c, "scan"));
+                        instructionsTv.setText("Find a surface with visible flat texture.");
+                        break;
+                    case 2:
+                        visualGif.setBackgroundResource(getImageId(c, "dots"));
+                        instructionsTv.setText("Scan the furface with device until dots appear on the screen.");
+                        break;
+                    case 3:
+                        visualGif.setBackgroundResource(getImageId(c, "width"));
+                        instructionsTv.setText("When measuring width, click the extreme sides of the object based on the dots.");
+                        break;
+                    case 4:
+                        visualGif.setBackgroundResource(getImageId(c, "height"));
+                        instructionsTv.setText("When measuring height, click the base of the object and use the slider to adjust height.");
+                        break;
+                    case 5:
+                        visualGif.setBackgroundResource(getImageId(c, "save"));
+                        instructionsTv.setText("Once the measuring is done, click the add button to save it to the database.");
+                        break;
+                    case 6:
+                        myDialog.dismiss();
+                        break;
+                }
+
+            }
+        });
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,18 +149,16 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<Measurement> arrayMeasure = new ArrayList<>();
 
-        arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.ux_fragment);
-        text = (TextView) findViewById(R.id.text);
 
-        sk_height_control = (SeekBar) findViewById(R.id.sk_height_control);
-        btn_height = (Button) findViewById(R.id.btn_height);
-        btn_save = (Button) findViewById(R.id.btn_save);
-        btn_width = (Button) findViewById(R.id.btn_width);
-        btn_share = (ImageButton) findViewById(R.id.btn_share);
-        viewList = findViewById(R.id.viewList);
+        myDialog = new Dialog(this);
+
+        initializeElements();
+
 
         sk_height_control.setEnabled(false);
+        arFragment.setMenuVisibility(false);
 
+        ShowPopup(this.findViewById(android.R.id.content));
 
         viewList.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,6 +167,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+
         btn_width.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -136,22 +197,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_share.setOnClickListener(new View.OnClickListener() {
+//        refreshBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                resetLayout();
+//            }
+//        });
+        settingsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(arl_saved.size() > 0){
-                    Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-                    sharingIntent.setType("text/plain");
-                    String shareBody = "";
-                    for(String measurement : arl_saved)
-                        shareBody += measurement+"\n";
-                    shareBody = shareBody.trim();
-                    sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "AR Measurements");
-                    sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
-                    startActivity(Intent.createChooser(sharingIntent, "Share via"));
-                }
-                else
-                    Toast.makeText(MainActivity.this, "Save measurements before sharing", Toast.LENGTH_SHORT).show();
+                ShowPopup(findViewById(android.R.id.content));
+
             }
         });
 
@@ -161,7 +217,7 @@ public class MainActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 upDistance = progress;
                 fl_measurement = progress/100f;
-                text.setText("Height: "+form_numbers.format(fl_measurement));
+                text.setText("Height: "+form_numbers.format(fl_measurement) + " m");
                 myanchornode.setLocalScale(new Vector3(1f, progress/10f, 1f));
                // ascend(myanchornode, upDistance);
             }
@@ -213,7 +269,7 @@ public class MainActivity extends AppCompatActivity {
                             anchor2 = anchor;
                             fl_measurement = getMetersBetweenAnchors(anchor1, anchor2);
                             text.setText("Width: " +
-                                    form_numbers.format(fl_measurement));
+                                    form_numbers.format(fl_measurement) + "m");
 
                         }
                     }
@@ -234,7 +290,34 @@ public class MainActivity extends AppCompatActivity {
                     andy.select();
                     andy.getScaleController().setEnabled(false);
                 });
+
+
     }
+
+    /**
+     * Initialize elements in the ui*/
+    void initializeElements()
+    {
+        arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.ux_fragment);
+        text = (TextView) findViewById(R.id.text);
+
+
+        sk_height_control = (SeekBar) findViewById(R.id.sk_height_control);
+        btn_height = (Button) findViewById(R.id.btn_height);
+        btn_save = (Button) findViewById(R.id.btn_save);
+        btn_width = (Button) findViewById(R.id.btn_width);
+        settingsBtn = (ImageButton) findViewById(R.id.settingsBtn);
+//        refreshBtn = findViewById(R.id.refreshBtn);
+
+
+        viewList = findViewById(R.id.viewList);
+    }
+
+
+    public static int getImageId(Context context, String imageName) {
+        return context.getResources().getIdentifier("drawable/" + imageName, null, context.getPackageName());
+    }
+
 
     /**
      * Function to raise an object perpendicular to the ArPlane a specific distance

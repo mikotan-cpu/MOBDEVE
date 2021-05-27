@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.ArrayList;
 
@@ -34,11 +35,19 @@ public class MeasurementList extends AppCompatActivity {
             arrayMeasure.add(item);
 
         }
-        System.out.println("BOBO" + arrayMeasure.size());
+        System.out.println("Test" + arrayMeasure.size());
         this.rv = findViewById(R.id.rv);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MeasurementList.this);
         this.rv.setLayoutManager(linearLayoutManager);
         MyAdapter myAdapter = new MyAdapter(this, arrayMeasure);
         this.rv.setAdapter(myAdapter);
+
+        View decorView = getWindow().getDecorView();
+        // Hide both the navigation bar and the status bar.
+        // SYSTEM_UI_FLAG_FULLSCREEN is only available on Android 4.1 and higher, but as
+        // a general rule, you should design your app to hide the status bar whenever you
+        // hide the navigation bar.
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
+        decorView.setSystemUiVisibility(uiOptions);
     }
 }
