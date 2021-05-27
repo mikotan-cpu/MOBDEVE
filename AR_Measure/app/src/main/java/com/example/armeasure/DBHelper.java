@@ -76,7 +76,7 @@ public class DBHelper extends SQLiteOpenHelper {
         if (cursor.getCount() > 0) {
 
 
-            long result = DB.delete("Measurements", "ObjectName", new String[]{ObjectName});
+            long result = DB.delete("Measurements", "ObjectName=?", new String[]{ObjectName});
 
             if (result == -1) {
                 return false;

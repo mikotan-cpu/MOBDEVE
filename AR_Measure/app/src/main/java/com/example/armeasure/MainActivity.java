@@ -18,6 +18,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -134,6 +135,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         DB = new DBHelper(this);
 
         if (!checkIsSupportedDeviceOrFinish(this)) {
@@ -426,4 +429,6 @@ public class MainActivity extends AppCompatActivity {
             n = null;
         }
     }
+
+
 }

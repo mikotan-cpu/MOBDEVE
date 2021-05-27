@@ -1,6 +1,8 @@
 package com.example.armeasure;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -41,6 +43,23 @@ public class MeasurementList extends AppCompatActivity {
         this.rv.setLayoutManager(linearLayoutManager);
         MyAdapter myAdapter = new MyAdapter(this, arrayMeasure);
         this.rv.setAdapter(myAdapter);
+
+        ItemTouchHelper.SimpleCallback itemTouchHelperCallbback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+                DB.deleteMeasurement(arrayMeasure.get(viewHolder.getAdapterPosition()).getObjectName());
+                System.out.println("GAGO" +viewHolder.getAdapterPosition());
+                arrayMeasure.remove(viewHolder.getAdapterPosition());
+                myAdapter.notifyDataSetChanged();
+            }
+        };
+        new ItemTouchHelper(itemTouchHelperCallbback).attachToRecyclerView(rv);
+
 
         View decorView = getWindow().getDecorView();
         // Hide both the navigation bar and the status bar.
