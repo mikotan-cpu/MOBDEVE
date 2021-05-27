@@ -9,16 +9,17 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     private ModelRenderable andyRenderable;
     private AnchorNode myanchornode;
     private DecimalFormat form_numbers = new DecimalFormat("#0.00 ");
-
+    private boolean showTutorial = true;
     private Anchor anchor1 = null, anchor2 = null;
 
     private HitResult myhit;
@@ -80,11 +81,15 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This will open up the tutorials tab*/
     public void ShowPopup(View v) {
+
         TextView instructionsTv;
         Button nextBtn;
         GifImageView visualGif;
         Context c = getApplicationContext();
         myDialog.setContentView(R.layout.tutorial_layout);
+
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sp.edit();
 
         visualGif = myDialog.findViewById(R.id.visualGif);
 
@@ -121,6 +126,9 @@ public class MainActivity extends AppCompatActivity {
                         instructionsTv.setText("Once the measuring is done, click the add button to save it to the database.");
                         break;
                     case 6:
+                        editor.putBoolean("showTutorial", false);
+                        showTutorial = false;
+                        editor.apply();
                         myDialog.dismiss();
                         break;
                 }
@@ -135,8 +143,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sp.edit();
+        myDialog = new Dialog(this);
         DB = new DBHelper(this);
 
         if (!checkIsSupportedDeviceOrFinish(this)) {
@@ -153,21 +162,20 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Measurement> arrayMeasure = new ArrayList<>();
 
 
-        myDialog = new Dialog(this);
-
         initializeElements();
 
 
         sk_height_control.setEnabled(false);
         arFragment.setMenuVisibility(false);
 
-        ShowPopup(this.findViewById(android.R.id.content));
+
 
         viewList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, MeasurementList.class);
                 startActivity(i);
+//                overridePendingTransition(R.anim.slidein_left, R.anim.slideout_right);
             }
         });
 
@@ -295,6 +303,16 @@ public class MainActivity extends AppCompatActivity {
                 });
 
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+
+        showTutorial = sp.getBoolean("showTutorial", false);
+        if(showTutorial)
+            ShowPopup(this.findViewById(android.R.id.content));
     }
 
     /**
@@ -429,6 +447,4 @@ public class MainActivity extends AppCompatActivity {
             n = null;
         }
     }
-
-
 }
