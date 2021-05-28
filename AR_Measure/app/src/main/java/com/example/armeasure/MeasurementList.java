@@ -13,13 +13,14 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class MeasurementList extends AppCompatActivity {
 
     private RecyclerView rv;
-    private Button backBtn, showTutBtn;
+    private Button backBtn, helpBtn;
     DBHelper DB;
     ArrayList<Measurement> arrayMeasure = new ArrayList<>();
 
@@ -33,7 +34,7 @@ public class MeasurementList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_measurement_list2);
         backBtn = findViewById(R.id.backBtn);
-        showTutBtn = findViewById(R.id.showTutBtn);
+        helpBtn = findViewById(R.id.helpBtn);
 
         Cursor res = DB.getData();
         while (res.moveToNext()){
@@ -66,17 +67,17 @@ public class MeasurementList extends AppCompatActivity {
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MeasurementList.this, MainActivity.class);
+                Intent i = new Intent(MeasurementList.this, Settings.class);
                 startActivity(i);
-//                overridePendingTransition(R.anim.slidein_left, R.anim.slideout_right);
+
             }
         });
-
-        showTutBtn.setOnClickListener(new View.OnClickListener() {
+        helpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                editor.putBoolean("showTutorial", true);
-                editor.apply();
+
+                Toast toast=Toast.makeText(getApplicationContext(),"Swipe left or right to delete a measurement!",Toast.LENGTH_SHORT);
+                toast.show();
             }
         });
 

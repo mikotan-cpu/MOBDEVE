@@ -11,6 +11,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Build.VERSION_CODES;
@@ -170,14 +171,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        viewList.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, MeasurementList.class);
-                startActivity(i);
-//                overridePendingTransition(R.anim.slidein_left, R.anim.slideout_right);
-            }
-        });
 
 
         btn_width.setOnClickListener(new View.OnClickListener() {
@@ -193,6 +186,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 resetLayout();
+                sk_height_control.getProgressDrawable().setColorFilter(0xFFF5B001, PorterDuff.Mode.MULTIPLY);
+                sk_height_control.getThumb().setColorFilter(0xFFF5B001, PorterDuff.Mode.MULTIPLY);
                 measure_height = true;
                 text.setText("Click the base of the object you want to measure");
             }
@@ -208,17 +203,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        refreshBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                resetLayout();
-//            }
-//        });
+
         settingsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ShowPopup(findViewById(android.R.id.content));
-
+                Intent i = new Intent(MainActivity.this, Settings.class);
+                startActivity(i);
             }
         });
 
@@ -324,6 +314,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         sk_height_control = (SeekBar) findViewById(R.id.sk_height_control);
+
         btn_height = (Button) findViewById(R.id.btn_height);
         btn_save = (Button) findViewById(R.id.btn_save);
         btn_width = (Button) findViewById(R.id.btn_width);
@@ -331,7 +322,6 @@ public class MainActivity extends AppCompatActivity {
 //        refreshBtn = findViewById(R.id.refreshBtn);
 
 
-        viewList = findViewById(R.id.viewList);
     }
 
 

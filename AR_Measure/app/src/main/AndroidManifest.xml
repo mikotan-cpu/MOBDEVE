@@ -3,11 +3,7 @@
     package="com.example.armeasure">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-
-
-
-    <uses-permission android:name="android.permission.CAMERA"
-       />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-feature
         android:name="android.hardware.camera.ar"
@@ -20,6 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Settings"></activity>
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
@@ -38,8 +35,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
@@ -50,8 +45,6 @@
         <meta-data
             android:name="com.google.ar.core"
             android:value="required" />
-
-
     </application>
 
 </manifest>
