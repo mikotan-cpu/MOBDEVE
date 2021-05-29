@@ -9,11 +9,14 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -51,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     private ModelRenderable andyRenderable;
     private AnchorNode myanchornode;
     private DecimalFormat form_numbers = new DecimalFormat("#0.00 ");
-
+    private boolean showTutorial = true;
     private Anchor anchor1 = null, anchor2 = null;
 
     private HitResult myhit;
@@ -79,11 +82,15 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This will open up the tutorials tab*/
     public void ShowPopup(View v) {
+
         TextView instructionsTv;
         Button nextBtn;
         GifImageView visualGif;
         Context c = getApplicationContext();
         myDialog.setContentView(R.layout.tutorial_layout);
+
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sp.edit();
 
         visualGif = myDialog.findViewById(R.id.visualGif);
 
@@ -120,6 +127,9 @@ public class MainActivity extends AppCompatActivity {
                         instructionsTv.setText("Once the measuring is done, click the add button to save it to the database.");
                         break;
                     case 6:
+                        editor.putBoolean("showTutorial", false);
+                        showTutorial = false;
+                        editor.apply();
                         myDialog.dismiss();
                         break;
                 }
@@ -134,6 +144,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sp.edit();
+        myDialog = new Dialog(this);
         DB = new DBHelper(this);
 
         if (!checkIsSupportedDeviceOrFinish(this)) {
@@ -150,23 +163,14 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Measurement> arrayMeasure = new ArrayList<>();
 
 
-        myDialog = new Dialog(this);
-
         initializeElements();
 
 
         sk_height_control.setEnabled(false);
         arFragment.setMenuVisibility(false);
 
-        ShowPopup(this.findViewById(android.R.id.content));
 
-        viewList.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, MeasurementList.class);
-                startActivity(i);
-            }
-        });
+
 
 
         btn_width.setOnClickListener(new View.OnClickListener() {
@@ -182,6 +186,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 resetLayout();
+                sk_height_control.getProgressDrawable().setColorFilter(0xFFF5B001, PorterDuff.Mode.MULTIPLY);
+                sk_height_control.getThumb().setColorFilter(0xFFF5B001, PorterDuff.Mode.MULTIPLY);
                 measure_height = true;
                 text.setText("Click the base of the object you want to measure");
             }
@@ -197,17 +203,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        refreshBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                resetLayout();
-//            }
-//        });
+
         settingsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ShowPopup(findViewById(android.R.id.content));
-
+                Intent i = new Intent(MainActivity.this, Settings.class);
+                startActivity(i);
             }
         });
 
@@ -294,6 +295,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+
+        showTutorial = sp.getBoolean("showTutorial", false);
+        if(showTutorial)
+            ShowPopup(this.findViewById(android.R.id.content));
+    }
+
     /**
      * Initialize elements in the ui*/
     void initializeElements()
@@ -303,6 +314,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         sk_height_control = (SeekBar) findViewById(R.id.sk_height_control);
+
         btn_height = (Button) findViewById(R.id.btn_height);
         btn_save = (Button) findViewById(R.id.btn_save);
         btn_width = (Button) findViewById(R.id.btn_width);
@@ -310,7 +322,6 @@ public class MainActivity extends AppCompatActivity {
 //        refreshBtn = findViewById(R.id.refreshBtn);
 
 
-        viewList = findViewById(R.id.viewList);
     }
 
 
@@ -384,8 +395,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 if(et_measure.length() != 0){
-               //     arl_saved.add(et_measure.getText()+": "+form_numbers.format(fl_measurement));
-
+                    
+                    if(measure_height==true)
+                    {
+                        dimension = "Height";
+                    }
+                    else
+                    {
+                        dimension = "Width";
+                    }
                     Boolean checkInsertData = DB.insertMeasurement(et_measure.getText().toString(),dimension, Float.parseFloat(form_numbers.format(fl_measurement)),"m");
                     if(checkInsertData==true)
                         Toast.makeText(MainActivity.this,"Inserted", Toast.LENGTH_SHORT).show();

@@ -1,0 +1,234 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:2:1-57:12
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\ee2aed993649744dbe8e9b3952efdd5b\appcompat-1.0.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.wear:wear:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\2703a943e247164f84faf4db7f207e5e\wear-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\2307990aa3686b622293233219252a15\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.ar.sceneform.ux:sceneform-ux:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\42005d3b49f9398cbed2dc24445ec19c\jetified-sceneform-ux-1.10.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\5a862a2f66433ed02ac97a2b2e410283\fragment-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\a9991b9e9a9ca72f87eeea951d76768c\vectordrawable-animated-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\bbb2ac4a2122490794b32635c76bd5c5\recyclerview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\e75efbda90fedef3b4b13ac8a1419100\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\c23d0594bfbde7e0cfa419c5b3c362c6\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\1b4794f88acfda07789565f3c4226906\vectordrawable-1.0.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\063b348a79790112444c0853cf4e0fcd\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\09c75acb395b13715db7724450b69fa6\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\080380d6666546688d8f3d92af8f89d3\coordinatorlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\0b6ec38a6bb37efe3e1b7d6a14f16978\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\c34fed6dca43797ddcbcd10245d853ae\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\645270d7848974f511bf3e13c10b9308\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\3d2eaf01736c03ff835591cc30a2e00f\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\2584325765943782bdcd8b9c313125c7\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.1] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\14ee4cbccc6112b6149ab3c06d00c4ab\core-1.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\5b09566da9a4e820f5d7e26319106e9a\versionedparcelable-1.0.0\AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\8d0c328ada1c2141ae3f2f95cf2afb30\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\02968bf2d5b18805a975b07cf45e2924\lifecycle-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\a823256315b0e57e2dcdd36e2b267334\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\6bd3658af1b377b43373972740e6cf6a\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\7a38cdaba9694121009b9f9b920e3e20\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\ba9b6fbb45d61038015a8f2e542ae0b3\lifecycle-viewmodel-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\7b97a655229044321606177cd0b447a7\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\cc2cc719d9e3c77115f10cb8bfec8ee0\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\307c94eef88f590571487f52e7498b61\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\ff49397b51a07a3e0c458e880b0b24ff\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.ar.sceneform:core:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\97684dfeb741d7c1b7f0ddc06fd42271\jetified-core-1.10.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.ar.sceneform:rendering:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\fc58098b7640d60583168193e4b2c818\jetified-rendering-1.10.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.ar.sceneform:sceneform-base:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\3d03584205da02199700b57fe6fb318f\jetified-sceneform-base-1.10.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.ar.sceneform:filament-android:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\1011b986ce00464b44c28363b20bc876\jetified-filament-android-1.10.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.ar:core:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\84011d0eea1319a8f8be387ddf10dc54\jetified-core-1.10.0\AndroidManifest.xml:17:1-46:12
+INJECTED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:2:1-57:12
+	package
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:3:5-36
+		INJECTED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:2:1-57:12
+		INJECTED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:2:1-57:12
+		INJECTED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.WAKE_LOCK
+ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:5:5-68
+	android:name
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:5:22-65
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:9:5-10:10
+	android:name
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:9:22-62
+uses-feature#android.hardware.camera.ar
+ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:12:5-14:35
+	android:required
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:14:9-32
+	android:name
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:13:9-50
+application
+ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:16:5-55:19
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\2307990aa3686b622293233219252a15\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\2307990aa3686b622293233219252a15\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [androidx.core:core:1.0.1] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\14ee4cbccc6112b6149ab3c06d00c4ab\core-1.0.1\AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.1] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\14ee4cbccc6112b6149ab3c06d00c4ab\core-1.0.1\AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\5b09566da9a4e820f5d7e26319106e9a\versionedparcelable-1.0.0\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\5b09566da9a4e820f5d7e26319106e9a\versionedparcelable-1.0.0\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.ar:core:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\84011d0eea1319a8f8be387ddf10dc54\jetified-core-1.10.0\AndroidManifest.xml:30:5-44:19
+MERGED from [com.google.ar:core:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\84011d0eea1319a8f8be387ddf10dc54\jetified-core-1.10.0\AndroidManifest.xml:30:5-44:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.1] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\14ee4cbccc6112b6149ab3c06d00c4ab\core-1.0.1\AndroidManifest.xml:22:18-86
+	android:supportsRtl
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:21:9-35
+	android:label
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:19:9-41
+	android:roundIcon
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:20:9-54
+	android:icon
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:18:9-43
+	android:allowBackup
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:17:9-35
+	android:theme
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:22:9-40
+activity#com.example.armeasure.MainActivity
+ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:23:9-31:20
+	android:screenOrientation
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:25:13-49
+	android:name
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:24:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:26:13-30:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:27:17-69
+	android:name
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:27:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:29:17-77
+	android:name
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:29:27-74
+activity#com.example.armeasure.MeasurementList
+ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:32:9-40:20
+	android:label
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:34:13-68
+	android:name
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:33:13-44
+meta-data#com.google.android.wearable.standalone
+ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:47:9-49:36
+	android:value
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:49:13-33
+	android:name
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:48:13-66
+meta-data#com.google.ar.core
+ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:50:9-52:40
+	android:value
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:52:13-37
+	android:name
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml:51:13-46
+uses-sdk
+INJECTED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\ee2aed993649744dbe8e9b3952efdd5b\appcompat-1.0.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\ee2aed993649744dbe8e9b3952efdd5b\appcompat-1.0.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.wear:wear:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\2703a943e247164f84faf4db7f207e5e\wear-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.wear:wear:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\2703a943e247164f84faf4db7f207e5e\wear-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\2307990aa3686b622293233219252a15\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\2307990aa3686b622293233219252a15\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.ar.sceneform.ux:sceneform-ux:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\42005d3b49f9398cbed2dc24445ec19c\jetified-sceneform-ux-1.10.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.ar.sceneform.ux:sceneform-ux:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\42005d3b49f9398cbed2dc24445ec19c\jetified-sceneform-ux-1.10.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\5a862a2f66433ed02ac97a2b2e410283\fragment-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\5a862a2f66433ed02ac97a2b2e410283\fragment-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\a9991b9e9a9ca72f87eeea951d76768c\vectordrawable-animated-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\a9991b9e9a9ca72f87eeea951d76768c\vectordrawable-animated-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\bbb2ac4a2122490794b32635c76bd5c5\recyclerview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\bbb2ac4a2122490794b32635c76bd5c5\recyclerview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\e75efbda90fedef3b4b13ac8a1419100\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\e75efbda90fedef3b4b13ac8a1419100\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\c23d0594bfbde7e0cfa419c5b3c362c6\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\c23d0594bfbde7e0cfa419c5b3c362c6\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\1b4794f88acfda07789565f3c4226906\vectordrawable-1.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\1b4794f88acfda07789565f3c4226906\vectordrawable-1.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\063b348a79790112444c0853cf4e0fcd\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\063b348a79790112444c0853cf4e0fcd\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\09c75acb395b13715db7724450b69fa6\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\09c75acb395b13715db7724450b69fa6\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\080380d6666546688d8f3d92af8f89d3\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\080380d6666546688d8f3d92af8f89d3\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\0b6ec38a6bb37efe3e1b7d6a14f16978\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\0b6ec38a6bb37efe3e1b7d6a14f16978\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\c34fed6dca43797ddcbcd10245d853ae\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\c34fed6dca43797ddcbcd10245d853ae\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\645270d7848974f511bf3e13c10b9308\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\645270d7848974f511bf3e13c10b9308\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\3d2eaf01736c03ff835591cc30a2e00f\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\3d2eaf01736c03ff835591cc30a2e00f\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\2584325765943782bdcd8b9c313125c7\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\2584325765943782bdcd8b9c313125c7\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\14ee4cbccc6112b6149ab3c06d00c4ab\core-1.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\14ee4cbccc6112b6149ab3c06d00c4ab\core-1.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\5b09566da9a4e820f5d7e26319106e9a\versionedparcelable-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\5b09566da9a4e820f5d7e26319106e9a\versionedparcelable-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\8d0c328ada1c2141ae3f2f95cf2afb30\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\8d0c328ada1c2141ae3f2f95cf2afb30\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\02968bf2d5b18805a975b07cf45e2924\lifecycle-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\02968bf2d5b18805a975b07cf45e2924\lifecycle-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\a823256315b0e57e2dcdd36e2b267334\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\a823256315b0e57e2dcdd36e2b267334\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\6bd3658af1b377b43373972740e6cf6a\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\6bd3658af1b377b43373972740e6cf6a\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\7a38cdaba9694121009b9f9b920e3e20\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\7a38cdaba9694121009b9f9b920e3e20\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\ba9b6fbb45d61038015a8f2e542ae0b3\lifecycle-viewmodel-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\ba9b6fbb45d61038015a8f2e542ae0b3\lifecycle-viewmodel-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\7b97a655229044321606177cd0b447a7\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\7b97a655229044321606177cd0b447a7\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\cc2cc719d9e3c77115f10cb8bfec8ee0\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\cc2cc719d9e3c77115f10cb8bfec8ee0\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\307c94eef88f590571487f52e7498b61\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\307c94eef88f590571487f52e7498b61\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\ff49397b51a07a3e0c458e880b0b24ff\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\ff49397b51a07a3e0c458e880b0b24ff\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.ar.sceneform:core:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\97684dfeb741d7c1b7f0ddc06fd42271\jetified-core-1.10.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform:core:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\97684dfeb741d7c1b7f0ddc06fd42271\jetified-core-1.10.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform:rendering:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\fc58098b7640d60583168193e4b2c818\jetified-rendering-1.10.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform:rendering:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\fc58098b7640d60583168193e4b2c818\jetified-rendering-1.10.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform:sceneform-base:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\3d03584205da02199700b57fe6fb318f\jetified-sceneform-base-1.10.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform:sceneform-base:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\3d03584205da02199700b57fe6fb318f\jetified-sceneform-base-1.10.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform:filament-android:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\1011b986ce00464b44c28363b20bc876\jetified-filament-android-1.10.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.ar.sceneform:filament-android:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\1011b986ce00464b44c28363b20bc876\jetified-filament-android-1.10.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.ar:core:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\84011d0eea1319a8f8be387ddf10dc54\jetified-core-1.10.0\AndroidManifest.xml:26:5-28:41
+MERGED from [com.google.ar:core:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\84011d0eea1319a8f8be387ddf10dc54\jetified-core-1.10.0\AndroidManifest.xml:26:5-28:41
+INJECTED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\CHRISTINE TAN\Desktop\ARCore-Projects\AR_Measure\app\src\main\AndroidManifest.xml
+meta-data#com.google.ar.core.min_apk_version
+ADDED from [com.google.ar:core:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\84011d0eea1319a8f8be387ddf10dc54\jetified-core-1.10.0\AndroidManifest.xml:33:9-35:41
+	android:value
+		ADDED from [com.google.ar:core:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\84011d0eea1319a8f8be387ddf10dc54\jetified-core-1.10.0\AndroidManifest.xml:35:13-38
+	android:name
+		ADDED from [com.google.ar:core:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\84011d0eea1319a8f8be387ddf10dc54\jetified-core-1.10.0\AndroidManifest.xml:34:13-62
+activity#com.google.ar.core.InstallActivity
+ADDED from [com.google.ar:core:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\84011d0eea1319a8f8be387ddf10dc54\jetified-core-1.10.0\AndroidManifest.xml:37:9-43:80
+	android:excludeFromRecents
+		ADDED from [com.google.ar:core:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\84011d0eea1319a8f8be387ddf10dc54\jetified-core-1.10.0\AndroidManifest.xml:40:13-46
+	android:launchMode
+		ADDED from [com.google.ar:core:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\84011d0eea1319a8f8be387ddf10dc54\jetified-core-1.10.0\AndroidManifest.xml:42:13-43
+	android:exported
+		ADDED from [com.google.ar:core:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\84011d0eea1319a8f8be387ddf10dc54\jetified-core-1.10.0\AndroidManifest.xml:41:13-37
+	android:configChanges
+		ADDED from [com.google.ar:core:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\84011d0eea1319a8f8be387ddf10dc54\jetified-core-1.10.0\AndroidManifest.xml:39:13-74
+	android:theme
+		ADDED from [com.google.ar:core:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\84011d0eea1319a8f8be387ddf10dc54\jetified-core-1.10.0\AndroidManifest.xml:43:13-77
+	android:name
+		ADDED from [com.google.ar:core:1.10.0] C:\Users\CHRISTINE TAN\.gradle\caches\transforms-2\files-2.1\84011d0eea1319a8f8be387ddf10dc54\jetified-core-1.10.0\AndroidManifest.xml:38:13-62
