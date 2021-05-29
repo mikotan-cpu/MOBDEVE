@@ -395,8 +395,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 if(et_measure.length() != 0){
-               //     arl_saved.add(et_measure.getText()+": "+form_numbers.format(fl_measurement));
-
+                    
+                    if(measure_height==true)
+                    {
+                        dimension = "Height";
+                    }
+                    else
+                    {
+                        dimension = "Width";
+                    }
                     Boolean checkInsertData = DB.insertMeasurement(et_measure.getText().toString(),dimension, Float.parseFloat(form_numbers.format(fl_measurement)),"m");
                     if(checkInsertData==true)
                         Toast.makeText(MainActivity.this,"Inserted", Toast.LENGTH_SHORT).show();
