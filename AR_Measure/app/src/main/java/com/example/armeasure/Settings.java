@@ -25,6 +25,10 @@ public class Settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sp.edit();
+
+
         backBtn = findViewById(R.id.backBtn2);
         inchesBtn = findViewById(R.id.inchesBtn);
         metersBtn = findViewById(R.id.metersBtn);
@@ -33,7 +37,11 @@ public class Settings extends AppCompatActivity {
         inchesCl = findViewById(R.id.inchesCl);
         metersCl = findViewById(R.id.metersCl);
 
-        inchesBtn.setVisibility(View.GONE);
+        //check if the current settings is to show meters or to show inches
+        if(sp.getBoolean("isMeters", true))
+            inchesBtn.setVisibility(View.GONE);
+        else
+            metersBtn.setVisibility(View.GONE);
 
         viewListTv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +57,9 @@ public class Settings extends AppCompatActivity {
             public void onClick(View view) {
                 inchesBtn.setVisibility(View.GONE);
                 metersBtn.setVisibility(View.VISIBLE);
+                editor.putBoolean("isMeters", true);
+                editor.apply();
+
             }
         });
         inchesCl.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +67,8 @@ public class Settings extends AppCompatActivity {
             public void onClick(View view) {
                 inchesBtn.setVisibility(View.VISIBLE);
                 metersBtn.setVisibility(View.GONE);
+                editor.putBoolean("isMeters", false);
+                editor.apply();
             }
         });
         tutorialSwitch.setOnClickListener(new View.OnClickListener() {

@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     private int tutorialCounter = 0;
     List<AnchorNode> anchorNodes = new ArrayList<>();
 
-    private boolean measure_height = false;
+    private boolean measure_height = false, isMeters = true;
     private String dimension;
     private ArrayList<String> arl_saved = new ArrayList<String>();
 
@@ -170,9 +170,6 @@ public class MainActivity extends AppCompatActivity {
         arFragment.setMenuVisibility(false);
 
 
-
-
-
         btn_width.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -212,26 +209,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        sk_height_control.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                upDistance = progress;
-                fl_measurement = progress/100f;
-                text.setText("Height: "+form_numbers.format(fl_measurement) + " m");
-                myanchornode.setLocalScale(new Vector3(1f, progress/10f, 1f));
-               // ascend(myanchornode, upDistance);
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-            }
-        });
-
         ModelRenderable.builder()
                 .setSource(this, R.raw.cubito3)
                 .build()
@@ -244,6 +221,29 @@ public class MainActivity extends AppCompatActivity {
                             toast.show();
                             return null;
                         });
+
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG, "onResume");
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+
+        showTutorial = sp.getBoolean("showTutorial", false);
+        if(showTutorial)
+            ShowPopup(this.findViewById(android.R.id.content));
+
+        isMeters = sp.getBoolean("isMeters", true);
+
 
         arFragment.setOnTapArPlaneListener(
                 (HitResult hitResult, Plane plane, MotionEvent motionEvent) -> {
@@ -269,8 +269,13 @@ public class MainActivity extends AppCompatActivity {
                         } else {
                             anchor2 = anchor;
                             fl_measurement = getMetersBetweenAnchors(anchor1, anchor2);
-                            text.setText("Width: " +
-                                    form_numbers.format(fl_measurement) + "m");
+                            if(isMeters)
+                                text.setText("Width: " + form_numbers.format(fl_measurement) + "m");
+                            else {
+                                Log.d(TAG, "measurement: " + fl_measurement);
+                                fl_measurement = (fl_measurement * 100f) / 2.54f;
+                                text.setText("Width: " + form_numbers.format(fl_measurement) + "in.");
+                            }
 
                         }
                     }
@@ -293,17 +298,32 @@ public class MainActivity extends AppCompatActivity {
                     andy.getScaleController().setEnabled(false);
                 });
 
+        sk_height_control.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                upDistance = progress;
+                fl_measurement = progress/100f;
+                if(isMeters)
+                    text.setText("Height: "+form_numbers.format(fl_measurement) + " m");
+                else {
+                    fl_measurement = (fl_measurement * 100f) / 2.54f;
+                    text.setText("Height: "+form_numbers.format(fl_measurement) + " inches");
 
-    }
+                }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
 
-        showTutorial = sp.getBoolean("showTutorial", false);
-        if(showTutorial)
-            ShowPopup(this.findViewById(android.R.id.content));
+                myanchornode.setLocalScale(new Vector3(1f, progress/10f, 1f));
+                // ascend(myanchornode, upDistance);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
     }
 
     /**
@@ -405,7 +425,13 @@ public class MainActivity extends AppCompatActivity {
                     {
                         dimension = "Width";
                     }
-                    Boolean checkInsertData = DB.insertMeasurement(et_measure.getText().toString(),dimension, Float.parseFloat(form_numbers.format(fl_measurement)),"m");
+                    Boolean checkInsertData;
+                    if(isMeters)
+                        checkInsertData = DB.insertMeasurement(et_measure.getText().toString(),dimension, Float.parseFloat(form_numbers.format(fl_measurement)),"m");
+                    else {
+                        fl_measurement = (fl_measurement * 100f) / 2.54f;
+                        checkInsertData = DB.insertMeasurement(et_measure.getText().toString(), dimension, Float.parseFloat(form_numbers.format(fl_measurement)), "in.");
+                    }
                     if(checkInsertData==true)
                         Toast.makeText(MainActivity.this,"Inserted", Toast.LENGTH_SHORT).show();
 
