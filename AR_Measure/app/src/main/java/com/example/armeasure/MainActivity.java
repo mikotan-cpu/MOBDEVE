@@ -287,6 +287,7 @@ public class MainActivity extends AppCompatActivity {
                     // Create the transformable andy and add it to the anchor.
                     TransformableNode andy = new TransformableNode(arFragment.getTransformationSystem());
                     andy.setParent(anchorNode);
+                    andy.setLocalScale(new Vector3(0.25f,0.25f,0.25f));
                     andy.setRenderable(andyRenderable);
                     andy.select();
                     andy.getScaleController().setEnabled(false);
