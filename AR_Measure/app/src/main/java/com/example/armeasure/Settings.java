@@ -19,6 +19,7 @@ public class Settings extends AppCompatActivity {
     private Switch tutorialSwitch;
     private TextView viewListTv;
     private ConstraintLayout inchesCl, metersCl;
+    private View decorView;
     private boolean showTutorial = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +29,14 @@ public class Settings extends AppCompatActivity {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sp.edit();
 
-
+        //        if (!checkIsSupportedDeviceOrFinish(this)) {
+//            return;
+//        }
+        try
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
         backBtn = findViewById(R.id.backBtn2);
         inchesBtn = findViewById(R.id.inchesBtn);
         metersBtn = findViewById(R.id.metersBtn);
@@ -94,6 +102,31 @@ public class Settings extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        decorView = getWindow().getDecorView();
+        decorView.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
+            @Override
+            public void onSystemUiVisibilityChange(int i) {
+                if(i == 0)
+                    decorView.setSystemUiVisibility(hideSystemBars());
+            }
+        });
+
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if(hasFocus)
+            decorView.setSystemUiVisibility(hideSystemBars());
+    }
+
+    private int hideSystemBars() {
+        return View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY |
+                View.SYSTEM_UI_FLAG_FULLSCREEN |
+                View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION |
+                View.SYSTEM_UI_FLAG_FULLSCREEN |
+                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
     }
 
 

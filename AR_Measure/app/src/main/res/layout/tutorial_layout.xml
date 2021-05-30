@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/layout_bg"
+        android:foregroundGravity="center"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,6 +46,16 @@
             android:text="Next"
             android:textColor="@color/white"
             android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/skipTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:text="skip" />
 
     </LinearLayout>
 

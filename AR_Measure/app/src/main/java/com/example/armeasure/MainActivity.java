@@ -17,6 +17,8 @@ import android.os.Build;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -71,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<String> arl_saved = new ArrayList<String>();
 
     private float fl_measurement = 0.0f;
+    private View decorView;
 
     private String message;
 
@@ -83,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
      * This will open up the tutorials tab*/
     public void ShowPopup(View v) {
 
-        TextView instructionsTv;
+        TextView instructionsTv, skipTv;
         Button nextBtn;
         GifImageView visualGif;
         Context c = getApplicationContext();
@@ -93,13 +96,24 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sp.edit();
 
         visualGif = myDialog.findViewById(R.id.visualGif);
-
-
         nextBtn = myDialog.findViewById(R.id.nextBtn);
         instructionsTv = myDialog.findViewById(R.id.instructionsTv);
         visualGif.setBackgroundResource(getImageId(c, "pick"));
+        skipTv = (TextView) myDialog.findViewById(R.id.skipTv);
+        SpannableString content = new SpannableString("SKIP");
+        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
+        skipTv.setText(content);
 
         tutorialCounter = 0;
+        skipTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editor.putBoolean("showTutorial", false);
+                showTutorial = false;
+                editor.apply();
+                myDialog.dismiss();
+            }
+        });
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -138,37 +152,41 @@ public class MainActivity extends AppCompatActivity {
         });
         myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         myDialog.show();
+
+        decorView = getWindow().getDecorView();
+        decorView.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
+            @Override
+            public void onSystemUiVisibilityChange(int i) {
+                if(i == 0)
+                    decorView.setSystemUiVisibility(hideSystemBars());
+            }
+        });
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sp.edit();
         myDialog = new Dialog(this);
         DB = new DBHelper(this);
-
-        if (!checkIsSupportedDeviceOrFinish(this)) {
-            return;
-        }
-        try
-        {
-            this.getSupportActionBar().hide();
-        }
-        catch (NullPointerException e){}
-
-        setContentView(R.layout.activity_main);
-
         ArrayList<Measurement> arrayMeasure = new ArrayList<>();
-
-
         initializeElements();
-
 
         sk_height_control.setEnabled(false);
         arFragment.setMenuVisibility(false);
 
+
+        decorView = getWindow().getDecorView();
+        decorView.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
+            @Override
+            public void onSystemUiVisibilityChange(int i) {
+                if(i == 0)
+                    decorView.setSystemUiVisibility(hideSystemBars());
+            }
+        });
 
         btn_width.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -223,7 +241,27 @@ public class MainActivity extends AppCompatActivity {
                         });
 
 
+
+
     }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if(hasFocus)
+            decorView.setSystemUiVisibility(hideSystemBars());
+    }
+
+    private int hideSystemBars() {
+        return View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY |
+                View.SYSTEM_UI_FLAG_FULLSCREEN |
+                View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION |
+                View.SYSTEM_UI_FLAG_FULLSCREEN |
+                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
+    }
+
+
 
     @Override
     protected void onStart() {
@@ -298,16 +336,19 @@ public class MainActivity extends AppCompatActivity {
                     andy.getScaleController().setEnabled(false);
                 });
 
+        //to do: double check seekbar interval and max
         sk_height_control.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 upDistance = progress;
+//                fl_measurement = progress/200f;
                 fl_measurement = progress/100f;
                 if(isMeters)
                     text.setText("Height: "+form_numbers.format(fl_measurement) + " m");
                 else {
+                    Toast.makeText(MainActivity.this,String.valueOf(fl_measurement), Toast.LENGTH_SHORT).show();
                     fl_measurement = (fl_measurement * 100f) / 2.54f;
-                    text.setText("Height: "+form_numbers.format(fl_measurement) + " inches");
+                    text.setText("Height: "+form_numbers.format(fl_measurement) + " in.");
 
                 }
 
