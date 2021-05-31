@@ -208,6 +208,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Opens the dialog box to save data to DB
         btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -219,6 +220,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        
         settingsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -227,6 +229,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Renders the 3D object used for measuring
         ModelRenderable.builder()
                 .setSource(this, R.raw.cubito3)
                 .build()
@@ -327,7 +330,7 @@ public class MainActivity extends AppCompatActivity {
                     myanchornode = anchorNode;
                     anchorNodes.add(anchorNode);
 
-                    // Create the transformable andy and add it to the anchor.
+                    // Create the transformable andy and add it to the anchor(3D object).
                     TransformableNode andy = new TransformableNode(arFragment.getTransformationSystem());
                     andy.setParent(anchorNode);
                     if(measure_height==false)
@@ -446,7 +449,10 @@ public class MainActivity extends AppCompatActivity {
         }
         return true;
     }
-
+    
+ /**
+     * Opens dialog box wherein user can input the anme of the measured object. User can also save the measurement into the DB through this dialog box.
+     */
     private void saveDialog() {
         AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
         View mView = getLayoutInflater().inflate(R.layout.dialog_save, null);
@@ -503,6 +509,9 @@ public class MainActivity extends AppCompatActivity {
         emptyAnchors();
     }
 
+    /**
+    *Removes anchors(3D Objects) from the screen.
+    */
     private void emptyAnchors(){
         anchor1 = null;
         anchor2 = null;
