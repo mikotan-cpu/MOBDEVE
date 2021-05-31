@@ -28,24 +28,129 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="016ad6f7-310e-47a6-9d21-02cf40be0f2c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/armeasure/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/armeasure/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/sampledata/cubito.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/sampledata/cubito.sfa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/sampledata/cubito2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/sampledata/cubito2.sfa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/sampledata/cubito3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/sampledata/cubito3.sfa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/androidTest/java/com/example/armeasure/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/assets/cubito.sfb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/assets/cubito2.sfb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/assets/cubito3.sfb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/ic_launcher-web.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/java/com/example/armeasure/DBHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/java/com/example/armeasure/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/java/com/example/armeasure/Measurement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/java/com/example/armeasure/MeasurementList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/java/com/example/armeasure/MyAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/java/com/example/armeasure/MyViewHolder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/java/com/example/armeasure/Settings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/anim/slidein_left.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/anim/slideout_right.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-anydpi/back.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-anydpi/check.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-anydpi/help.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-anydpi/ic_height.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-anydpi/settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-anydpi/yellow_back.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-hdpi/back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-hdpi/check.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-hdpi/help.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-hdpi/ic_height.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-hdpi/settings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-hdpi/yellow_back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-mdpi/back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-mdpi/check.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-mdpi/help.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-mdpi/ic_height.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-mdpi/settings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-mdpi/yellow_back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-xhdpi/back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-xhdpi/check.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-xhdpi/help.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-xhdpi/ic_height.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-xhdpi/settings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-xhdpi/yellow_back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-xxhdpi/back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-xxhdpi/check.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-xxhdpi/dots.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-xxhdpi/height.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-xxhdpi/heightbutton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-xxhdpi/help.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-xxhdpi/ic_height.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-xxhdpi/pick.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-xxhdpi/save.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-xxhdpi/scan.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-xxhdpi/settings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-xxhdpi/width.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-xxhdpi/widthbutton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable-xxhdpi/yellow_back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable/addbutton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable/ic_button_round_green.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable/ic_button_round_orange.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable/ic_button_small_icon.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable/ic_share_black_40dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/drawable/layout_bg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/layout/activity_measurement_list2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/layout/activity_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/layout/dialog_save.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/layout/template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/layout/tutorial_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/raw/cubito.sfb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/raw/cubito2.sfb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/raw/cubito3.sfb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/values-round/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/app/src/test/java/com/example/armeasure/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AR_Measure/settings.gradle" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[3200a320e85ca567]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -60,7 +165,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1qunPaYCILtvGpCB8ev2L6J6Qtx" />
   <component name="ProjectViewState">
@@ -74,7 +179,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$/app/src/main/java/com/example/armeasure" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/example/armeasure" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/SukatApp" />
     <property name="project.structure.last.edited" value="SDK Location" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -287,10 +392,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="438" y="87" key="AndroidProcessChooserDialog/0.0.1280.680@0.0.1280.680" timestamp="1617939129020" />
-    <state x="385" y="95" key="FileChooserDialogImpl" timestamp="1620712230159">
+    <state x="385" y="95" key="FileChooserDialogImpl" timestamp="1622431254511">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="385" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1620712230159" />
+    <state x="385" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1622431254511" />
     <state width="1202" height="154" key="GridCell.Tab.0.bottom" timestamp="1621440514153">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
