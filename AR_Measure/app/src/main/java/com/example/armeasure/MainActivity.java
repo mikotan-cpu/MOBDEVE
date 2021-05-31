@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 2:
                         visualGif.setBackgroundResource(getImageId(c, "dots"));
-                        instructionsTv.setText("Scan the furface with device until dots appear on the screen.");
+                        instructionsTv.setText("Scan the surface with device until dots appear on the screen.");
                         break;
                     case 3:
                         visualGif.setBackgroundResource(getImageId(c, "width"));
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 5:
                         visualGif.setBackgroundResource(getImageId(c, "save"));
-                        instructionsTv.setText("Once the measuring is done, click the add button to save it to the database.");
+                        instructionsTv.setText("Once the measuring is done, click the add button to save it.");
                         break;
                     case 6:
                         editor.putBoolean("showTutorial", false);
@@ -276,7 +276,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onResume");
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
 
-        showTutorial = sp.getBoolean("showTutorial", false);
+        showTutorial = sp.getBoolean("showTutorial", true);
         if(showTutorial)
             ShowPopup(this.findViewById(android.R.id.content));
 
@@ -330,7 +330,8 @@ public class MainActivity extends AppCompatActivity {
                     // Create the transformable andy and add it to the anchor.
                     TransformableNode andy = new TransformableNode(arFragment.getTransformationSystem());
                     andy.setParent(anchorNode);
-                    andy.setLocalScale(new Vector3(0.25f,0.25f,0.25f));
+                    if(measure_height==false)
+                        andy.setLocalScale(new Vector3(0.25f,0.25f,0.25f));
                     andy.setRenderable(andyRenderable);
                     andy.select();
                     andy.getScaleController().setEnabled(false);
@@ -470,11 +471,11 @@ public class MainActivity extends AppCompatActivity {
                     if(isMeters)
                         checkInsertData = DB.insertMeasurement(et_measure.getText().toString(),dimension, Float.parseFloat(form_numbers.format(fl_measurement)),"m");
                     else {
-                        fl_measurement = (fl_measurement * 100f) / 2.54f;
-                        checkInsertData = DB.insertMeasurement(et_measure.getText().toString(), dimension, Float.parseFloat(form_numbers.format(fl_measurement)), "in.");
+
+                        checkInsertData = DB.insertMeasurement(et_measure.getText().toString(),dimension, Float.parseFloat(form_numbers.format(fl_measurement)),"in");
                     }
                     if(checkInsertData==true)
-                        Toast.makeText(MainActivity.this,"Inserted", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this,"Saved", Toast.LENGTH_SHORT).show();
 
                     else
                         Toast.makeText(MainActivity.this,"Not Inserted", Toast.LENGTH_SHORT).show();

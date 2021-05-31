@@ -58,7 +58,7 @@
         android:id="@+id/sk_height_control"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:max="250"
+        android:max="500"
         android:min="0"
         android:progress="10"
         app:layout_constraintBottom_toTopOf="@+id/mainBar" />
