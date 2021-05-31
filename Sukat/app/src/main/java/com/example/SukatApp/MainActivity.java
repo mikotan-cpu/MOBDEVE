@@ -208,8 +208,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Opens the dialog box to save data to DB
-        btn_save.setOnClickListener(new View.OnClickListener() {
+/**
+       Opens the dialog box that will be saving the data to the DB
+       */    
+            btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(fl_measurement != 0.0f)
@@ -220,8 +222,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        
-        settingsBtn.setOnClickListener(new View.OnClickListener() {
+  /**
+     Will bring the user to the Settings activity
+     */         
+            settingsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, Settings.class);
@@ -229,8 +233,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Renders the 3D object used for measuring
-        ModelRenderable.builder()
+/**
+    Renders the 3D objects that will be used for measuring
+     */
+                ModelRenderable.builder()
                 .setSource(this, R.raw.cubito3)
                 .build()
                 .thenAccept(renderable -> andyRenderable = renderable)
@@ -293,12 +299,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                     myhit = hitResult;
 
-                    // Create the Anchor.
+                    // Initializes anchor object(3D object)
                     Anchor anchor = hitResult.createAnchor();
-
                     AnchorNode anchorNode = new AnchorNode(anchor);
-
-
                     anchorNode.setParent(arFragment.getArSceneView().getScene());
 
                     if(!measure_height) {
@@ -330,7 +333,7 @@ public class MainActivity extends AppCompatActivity {
                     myanchornode = anchorNode;
                     anchorNodes.add(anchorNode);
 
-                    // Create the transformable andy and add it to the anchor(3D object).
+                    // Create the transformable anchor(3D object).
                     TransformableNode andy = new TransformableNode(arFragment.getTransformationSystem());
                     andy.setParent(anchorNode);
                     if(measure_height==false)
@@ -358,7 +361,6 @@ public class MainActivity extends AppCompatActivity {
 
 
                 myanchornode.setLocalScale(new Vector3(1f, progress/10f, 1f));
-                // ascend(myanchornode, upDistance);
             }
 
             @Override
