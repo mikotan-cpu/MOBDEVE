@@ -105,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
         skipTv.setText(content);
 
         tutorialCounter = 0;
+        //when skipTv was click, the tutorial tab will be closed, regardless if its finished or not
         skipTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -118,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 tutorialCounter++;
+                //the elements will be changed depending on the order
                 switch(tutorialCounter)
                 {
                     case 1:
@@ -141,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
                         instructionsTv.setText("Once the measuring is done, click the add button to save it.");
                         break;
                     case 6:
+                        //if it's the last step of the tutorial, changes will be made on preferences and close the dialog
                         editor.putBoolean("showTutorial", false);
                         showTutorial = false;
                         editor.apply();
@@ -188,6 +191,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //if width was selected
         btn_width.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -196,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
                 text.setText("Click the extremes you want to measure");
             }
         });
-
+        //if height was selected
         btn_height.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -248,12 +252,9 @@ public class MainActivity extends AppCompatActivity {
                             toast.show();
                             return null;
                         });
-
-
-
-
     }
 
+    //this allows the user to use the application with fullscreen
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
@@ -271,14 +272,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-
-    }
-
+    //recheck the setting sthat needs to be set such as showing tutorials, and meters or inches as the unit for measurement
     @Override
     protected void onResume() {
         super.onResume();
@@ -286,6 +280,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
 
         showTutorial = sp.getBoolean("showTutorial", true);
+        //if it's saved in the preference to show tutorial, only thenw ill the pop up be opened
         if(showTutorial)
             ShowPopup(this.findViewById(android.R.id.content));
 
@@ -313,9 +308,11 @@ public class MainActivity extends AppCompatActivity {
                         } else {
                             anchor2 = anchor;
                             fl_measurement = getMetersBetweenAnchors(anchor1, anchor2);
+                            //checking the unit of measurement
                             if(isMeters)
                                 text.setText("Width: " + form_numbers.format(fl_measurement) + "m");
                             else {
+                                //the default unit of measurement of the API is meters, thus if the user decided to use inches, the measurement will be converted to inches
                                 Log.d(TAG, "measurement: " + fl_measurement);
                                 fl_measurement = (fl_measurement * 100f) / 2.54f;
                                 text.setText("Width: " + form_numbers.format(fl_measurement) + "in.");
@@ -343,7 +340,7 @@ public class MainActivity extends AppCompatActivity {
                     andy.getScaleController().setEnabled(false);
                 });
 
-        //to do: double check seekbar interval and max
+
         sk_height_control.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {

@@ -29,14 +29,6 @@ public class Settings extends AppCompatActivity {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sp.edit();
 
-        //        if (!checkIsSupportedDeviceOrFinish(this)) {
-//            return;
-//        }
-        try
-        {
-            this.getSupportActionBar().hide();
-        }
-        catch (NullPointerException e){}
         backBtn = findViewById(R.id.backBtn2);
         inchesBtn = findViewById(R.id.inchesBtn);
         metersBtn = findViewById(R.id.metersBtn);
@@ -60,6 +52,7 @@ public class Settings extends AppCompatActivity {
             }
         });
 
+        //if the user chose meter for unif of measurement, inches check button will be hidden and vice versa
         metersCl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -79,6 +72,7 @@ public class Settings extends AppCompatActivity {
                 editor.apply();
             }
         });
+        //this will always be false since once you selected this to check, the tutorial will popup the next time you open main activity and after viewing the tutorial, it will be hidden once again
         tutorialSwitch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
